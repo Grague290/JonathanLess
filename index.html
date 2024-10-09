@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login con LESS</title>
+
+    <link rel="stylesheet/less" type="text/css" href="main.less">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hola mundo</h1>
+
+        <form class="form">
+            <fieldset>
+                <legend>Formulario de Ingreso</legend>
+                
+                <fieldset>
+                    <legend>Correo Electrónico</legend>
+                    <input type="text" name="email" placeholder="ejemplo@ejemplo.com" id="email"> 
+                </fieldset>
+                    
+                <fieldset>
+                    <legend>Contraseña</legend>
+                    <input type="password" name="password" placeholder="Contraseña" id="password">
+                </fieldset>
+
+                <fieldset class="roles">
+                    <legend>Tipo Usuario</legend>
+                    
+                    <div class="role-option admin">
+                        <label>
+                            <input type="checkbox" name="opcion1" value="1">
+                            Administrador
+                        </label>
+                    </div>
+                    <div class="role-option gerente">
+                        <label>
+                            <input type="checkbox" name="opcion2" value="2">
+                            Gerente
+                        </label>
+                    </div>
+                    <div class="role-option propietario">
+                        <label>
+                            <input type="checkbox" name="opcion3" value="3">
+                            Propietario
+                        </label>
+                    </div>
+                    <div class="role-option agente">
+                        <label>
+                            <input type="checkbox" name="opcion4" value="4">
+                            Agente de ventas
+                        </label>
+                    </div>
+                    <div class="role-option prospecto">
+                        <label>
+                            <input type="checkbox" name="opcion5" value="5">
+                            Prospecto
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit">
+                    Acceder
+                </button>
+
+                <div class="forgot-password">
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

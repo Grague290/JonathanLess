@@ -1,0 +1,92 @@
+@color_light: #ffffff;
+@color_dark: #222222;
+@color_accent: #1e90ff;
+
+@background_primary: #f5f5f5;
+@background_secondary: #e0e0e0;
+@background_admin: #ff5733;       
+@background_gerente: #33c1ff;     
+@background_propietario: #33ff57; 
+@background_agente: #ffd700;     
+@background_prospecto: #9400d3;   
+.container {
+    width: 500px;
+    padding: 20px;
+    background-color: @background_primary;
+    border-radius: 4px;
+    border: 4px solid @color_dark;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    h1 {
+        color: @color_dark;
+        font-size: 22px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        margin-bottom: 15px;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 90%;
+        padding: 12px;
+        margin: 10px 0;
+        border: 3px solid darken(@background_secondary, 30%);
+        border-radius: 4px;
+        background-color: @background_secondary;
+    }
+
+    .roles {
+        margin-top: 20px;
+
+        .role-option {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 5px 0;
+            border: 2px solid darken(@background_secondary, 30%);
+            color: @color_light;
+            font-weight: bold;
+            label {
+                display: block;
+                font-size: 15px;
+                color: @color_light;
+            }
+        }
+
+        .admin { background-color: @background_admin; }
+        .gerente { background-color: @background_gerente; }
+        .propietario { background-color: @background_propietario; }
+        .agente { background-color: @background_agente; }
+        .prospecto { background-color: @background_prospecto; }
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 12px 24px;
+        background-color: @color_accent;
+        color: @color_light;
+        border: 3px solid darken(@color_accent, 25%);
+        border-radius: 3px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: darken(@color_accent, 20%);
+            color: @color_light;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .forgot-password {
+        margin-top: 10px;
+        a {
+            color: darken(@color_accent, 30%);
+            font-size: 14px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+                color: lighten(@color_accent, 20%);
+            }
+        }
+    }
+}
